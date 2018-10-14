@@ -1,5 +1,78 @@
+<!DOCTYPE html>
 <html>
+<head>
+	<!--图标-->
+    <link rel="shortcut icon" href="/search.jpg" />
+	<title>Home</title>
+	<!-- metatags-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } 
+	</script>
+	<!-- Meta tag Keywords -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/><!--stylesheet-css-->
+	<script type="text/js/" src="js/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="css/font-awesome.css"><!-- fontawesome -->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online-fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"><!--online-fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"><!--online-fonts-->
+</head>
 <body>
-<h1>我的个人主页</h1>
+	<div class="w3l-timer">
+		<div class="simply-countdown-losange" id="simply-countdown-losange"></div>
+	</div>
+
+	<!--target="_blank" 新窗口打开
+	target="_parent"  同一窗口打开-->
+
+	<form class="w3l-form" target="_parent" method="get" action="https://www.google.com/search">
+		<div class="w3l-text">
+			<input type="text" name="q" baiduSug="q" autocomplete="on" placeholder="Enter"/>
+			<span><input type="submit" value="Google"></span>
+		</div>			
+	</form>
+
+	<form class="w3l-form" target="_parent" method="get" action="https://www.baidu.com/s">
+		<div class="w3l-text">
+			<input type="text" name="wd" baiduSug="1" autocomplete="on" placeholder="Enter"/>
+			<span><input type="submit" value="百度"></span>
+		</div>			
+	</form>
+
+	<form class="w3l-form" target="_parent" method="get" action="https://cn.bing.com/search">
+		<div class="w3l-text">
+			<input type="text" name="q" baiduSug="1" autocomplete="on" placeholder="Enter"/>
+			<span><input type="submit" value="必应"></span>
+		</div>			
+	</form>	
+
+
+	<div class="w3ls-icons">
+		<ul>
+			<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+		</ul>
+	</div>
+	<footer><a target="_blank" href="https://scut.webpress.top">木棉导航</a></footer>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/simplyCountdown.js"></script>
+<script>
+  /**
+   * WARNING: I set this coundtown to be running until the end of times.
+   * So when you'll init the plugin, follow how it's done in plugin documentation.
+   */
+  var d = new Date();
+    d.setDate(d.getDate() + 366);
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
+        year: d.getFullYear(),
+        month: d.getMonth() +1,
+        day: d.getDate() ,
+        enableUtc: true
+    });
+</script>
 </body>
 </html>
